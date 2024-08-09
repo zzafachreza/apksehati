@@ -166,7 +166,7 @@ export default function Login({ navigation, route }) {
                     ...fonts.headline5,
                     textAlign: 'center',
                     color: colors.white
-                  }}>Daftar Sekarang !</Text></Text>
+                  }}>Daftar</Text></Text>
                 </View>
               </TouchableWithoutFeedback>}
 

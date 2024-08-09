@@ -3,7 +3,7 @@ import React from 'react'
 import { colors, fonts } from '../../../utils'
 import { MyButton, MyCalendar, MyGap, MyHeader, MyInput, MyPicker } from '../../../components'
 
-export default function TrisemesterII1({navigation}) {
+export default function TrisemesterII2({navigation}) {
     const handleBack = () => {
         navigation.navigate("")
     }
@@ -16,7 +16,7 @@ export default function TrisemesterII1({navigation}) {
 
        <View style={{padding:10}}>
        <MyPicker label="Trimester " data={[
-            {label: 'Trimester  II - 1', value: 'Trimester  II - 1'}
+            {label: 'Trimester  II - 2', value: 'Trimester  II - 2'}
         ]}/>
        </View>
 

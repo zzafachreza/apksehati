@@ -24,6 +24,7 @@ import VideoMateri from './VideoMateri';
 import TanyaJawab from './TanyaJawab';
 import Artikel from './Artikel';
 import Kuesioner from './Kuesioner';
+import TrisemesterII2 from './datapemeriksaanibuhamil/TreimesterII-2';
 
 
 
@@ -55,7 +56,7 @@ export {
   TanyaJawab,
   Artikel,
   Kuesioner,
-  
+  TrisemesterII2,
 
 
 

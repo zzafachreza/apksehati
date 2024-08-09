@@ -19,7 +19,7 @@ export default function IbuHamil({navigation}) {
               navigation.navigate('TrisemesterII1'); // Ganti dengan nama halaman yang sesuai
               break;
             case 'Trimester  II - 2':
-              navigation.navigate('TrisemesterII1'); // Ganti dengan nama halaman yang sesuai
+              navigation.navigate('TrisemesterII2'); // Ganti dengan nama halaman yang sesuai
               break;
             case 'Trimester  III - 1':
               navigation.navigate('TrisemesterIII1'); // Ganti dengan nama halaman yang sesuai

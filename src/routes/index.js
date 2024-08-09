@@ -28,6 +28,7 @@ import {
   TanyaJawab,
   Artikel,
   Kuesioner,
+  TrisemesterII2,
 
 
 
@@ -160,7 +161,7 @@ export default function Router() {
 
 <Stack.Screen
         name="TrisemesterII2"
-        component={TrisemesterIII1}
+        component={TrisemesterII2}
         options={{
           headerShown: false,
 
