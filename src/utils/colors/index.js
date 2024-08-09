@@ -20,7 +20,8 @@ export const colors = {
   hijau: '#56BC6C',
   kuning: '#D7A43A',
   merah: '#B9454A',
-  tekscolor: '#793C5A'
+  tekscolor: '#793C5A',
+  card: '#FFFAC3'
 };
 
 export const Color = {

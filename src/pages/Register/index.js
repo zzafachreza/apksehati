@@ -123,9 +123,10 @@ export default function Register({ navigation, route }) {
     const [sama, setSama] = useState(true)
 
     return (
-        <SafeAreaView style={{
+        <ImageBackground source={require('../../assets/bglogin.png')} style={{
             flex: 1,
-            backgroundColor: colors.white,
+            width:'100%',
+            height:'100%'
         }}>
             {/* <MyHeader title="Daftar Akun" /> */}
 
@@ -229,19 +230,19 @@ export default function Register({ navigation, route }) {
                                 onPress={simpan}
                             />
 
-                            <MyGap jarak={12} />
+                            <MyGap jarak={50} />
                             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                                 <Text style={{
                                     ...fonts.body3,
-                                    color: Color.blueGray[400],
+                                    color: colors.white,
                                     textAlign: 'center'
                                 }}>
                                     Saya sudah memiliki akun? <Text style={{
                                         ...fonts.headline5,
-                                        color: colors.tekscolor,
+                                        color: colors.white,
                                         textAlign: 'center'
                                     }}>
-                                        Masuk Sekarang!
+                                        Masuk
                                     </Text>
                                 </Text>
                             </TouchableOpacity>
@@ -257,7 +258,7 @@ export default function Register({ navigation, route }) {
             </ScrollView>
 
 
-        </SafeAreaView >
+        </ImageBackground >
     );
 }
 

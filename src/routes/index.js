@@ -24,6 +24,10 @@ import {
   IbuBersalin,
   IbuNifas,
   IbuNifasKF,
+  VideoMateri,
+  TanyaJawab,
+  Artikel,
+  Kuesioner,
 
 
 
@@ -32,7 +36,7 @@ import { colors } from '../utils';
 import { Icon } from 'react-native-elements';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigator } from '../components';
-import TrisemesterII2 from '../pages/datapemeriksaanibuhamil/TrisemesterII-2';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -156,7 +160,7 @@ export default function Router() {
 
 <Stack.Screen
         name="TrisemesterII2"
-        component={TrisemesterII2}
+        component={TrisemesterIII1}
         options={{
           headerShown: false,
 
@@ -223,13 +227,42 @@ export default function Router() {
 
 
       <Stack.Screen
-        name="Take"
-        component={Take}
+        name="VideoMateri"
+        component={VideoMateri}
         options={{
           headerShown: false,
 
         }}
       />
+
+<Stack.Screen
+        name="TanyaJawab"
+        component={TanyaJawab}
+        options={{
+          headerShown: false,
+
+        }}
+      />
+
+<Stack.Screen
+        name="Artikel"
+        component={Artikel}
+        options={{
+          headerShown: false,
+
+        }}
+      />
+
+
+<Stack.Screen
+        name="Kuesioner"
+        component={Kuesioner}
+        options={{
+          headerShown: false,
+
+        }}
+      />
+
 
 
       <Stack.Screen

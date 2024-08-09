@@ -14,19 +14,26 @@ export default function TrisemesterIII2({navigation}) {
       <ScrollView>
         <View style={{padding:20}}>
 
-        <MyPicker label="Trisemester" data={[
-            {label: 'Trisemester III - 2', value: 'Trisemester III - 2'}
+   <View style={{padding:10}}>
+   <MyPicker label="Trimester " data={[
+            {label: 'Trimester  III - 2', value: 'Trimester  III - 2'}
         ]}/>
 
+   </View>
         <MyGap jarak={20}/>
 
+<View style={{backgroundColor:colors.card, padding:10}}>
         <MyCalendar label="Tanggal Periksa" />
 
         <MyGap jarak={20}/>
 
         <MyInput label="Tempat Periksa"/>
 
+</View>
+
         <MyGap jarak={20}/>
+
+        <View style={{padding:10}}>
 
         <MyInput keyboardType="numeric" label="Timbang BB"/>
 
@@ -102,6 +109,8 @@ export default function TrisemesterIII2({navigation}) {
 
 
 
+
+        </View>
 
 
 

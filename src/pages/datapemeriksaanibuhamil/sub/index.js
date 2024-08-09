@@ -7,7 +7,7 @@ import { MyGap, MyHeader } from '../../../components'
 export default function SubDataPemeriksaanIbuHami({navigation}) {
   return (
     <View style={{flex:1, backgroundColor:colors.white}}>
-     <MyHeader title="Data Hasil Pemeriksaan Ibu Hamil"/>
+     <MyHeader title="Data Hasil Pemeriksaan"/>
      <ScrollView>
      <View style={{padding:20, }}>
 

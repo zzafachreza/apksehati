@@ -20,6 +20,10 @@ import TrisemesterIII3 from './datapemeriksaanibuhamil/TrisemesterIII-3';
 import IbuBersalin from './datapemeriksaanibuhamil/sub/ibubersalin';
 import IbuNifas from './datapemeriksaanibuhamil/sub/ibunifas';
 import IbuNifasKF from './datapemeriksaanibuhamil/IbuNifasKF';
+import VideoMateri from './VideoMateri';
+import TanyaJawab from './TanyaJawab';
+import Artikel from './Artikel';
+import Kuesioner from './Kuesioner';
 
 
 
@@ -47,8 +51,11 @@ export {
   IbuBersalin,
   IbuNifas,
   IbuNifasKF,
-
-
+  VideoMateri,
+  TanyaJawab,
+  Artikel,
+  Kuesioner,
+  
 
 
 

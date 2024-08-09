@@ -139,7 +139,7 @@ export default function Home({ navigation, route }) {
 
       {/* VIDEO MATERI */}
       <MyGap jarak={10}/>
-      <TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("VideoMateri")}>
         <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
         flexDirection:'row', justifyContent:'center'}}>
           <View style={{left:-35}}>
@@ -156,7 +156,7 @@ export default function Home({ navigation, route }) {
 
             {/* TANYA JAWAB */}
             <MyGap jarak={10}/>
-      <TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("TanyaJawab")}>
         <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
         flexDirection:'row', justifyContent:'center'}}>
           <View style={{left:-30}}>
@@ -174,7 +174,7 @@ export default function Home({ navigation, route }) {
 
         {/* ARTIKEL */}
         <MyGap jarak={10}/>
-      <TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("Artikel")}>
         <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
         flexDirection:'row', justifyContent:'center'}}>
           <View style={{left:-70}}>
@@ -189,9 +189,9 @@ export default function Home({ navigation, route }) {
         </View>
       </TouchableWithoutFeedback>
 
-         {/* ARTIKEL */}
+         {/* KUESIONER */}
          <MyGap jarak={10}/>
-      <TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("Kuesioner")}>
         <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
         flexDirection:'row', justifyContent:'center'}}>
           <View style={{left:-50}}>

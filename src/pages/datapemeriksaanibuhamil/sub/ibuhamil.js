@@ -12,22 +12,22 @@ export default function IbuHamil({navigation}) {
 
 
         switch (value) {
-            case 'Ttrisemester I':
+            case 'Trimester  I':
               navigation.navigate('TrisemesterI'); // Ganti dengan nama halaman yang sesuai
               break;
-            case 'Trisemester II - 1':
+            case 'Trimester  II - 1':
               navigation.navigate('TrisemesterII1'); // Ganti dengan nama halaman yang sesuai
               break;
-            case 'Trisemester II - 2':
+            case 'Trimester  II - 2':
               navigation.navigate('TrisemesterII1'); // Ganti dengan nama halaman yang sesuai
               break;
-            case 'Trisemester III - 1':
+            case 'Trimester  III - 1':
               navigation.navigate('TrisemesterIII1'); // Ganti dengan nama halaman yang sesuai
               break;
-            case 'Trisemester III - 2':
+            case 'Trimester  III - 2':
               navigation.navigate('TrisemesterIII2'); // Ganti dengan nama halaman yang sesuai
               break;
-            case 'Trisemester III - 3':
+            case 'Trimester  III - 3':
               navigation.navigate('TrisemesterIII3'); // Ganti dengan nama halaman yang sesuai
               break;
             default:
@@ -41,14 +41,14 @@ export default function IbuHamil({navigation}) {
     <ScrollView>
         <View style={{padding:10}}>
             <View>
-                <MyPicker label="Trisemester" data={[
-                    { label: 'Pilih Trisemester', value: '' },
-                    { label: 'Trisemester I', value: 'Ttrisemester I' },
-                    { label: 'Trisemester II - 1', value: 'Trisemester II - 1' },
-                    { label: 'Trisemester II - 2', value: 'Trisemester II - 2' },
-                    { label: 'Trisemester III - 1', value: 'Trisemester III - 1' },
-                    { label: 'Trisemester III - 2', value: 'Trisemester III - 2' },
-                    { label: 'Trisemester III - 3', value: 'Trisemester III - 3' },
+                <MyPicker label="Trimester " data={[
+                    { label: 'Pilih Trimester ', value: '' },
+                    { label: 'Trimester  I', value: 'Trimester  I' },
+                    { label: 'Trimester  II - 1', value: 'Trimester  II - 1' },
+                    { label: 'Trimester  II - 2', value: 'Trimester  II - 2' },
+                    { label: 'Trimester  III - 1', value: 'Trimester  III - 1' },
+                    { label: 'Trimester  III - 2', value: 'Trimester  III - 2' },
+                    { label: 'Trimester  III - 3', value: 'Trimester  III - 3' },
                 ]}
 
                     onValueChange={handleValueChange}

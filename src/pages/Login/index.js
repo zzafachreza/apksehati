@@ -77,25 +77,24 @@ export default function Login({ navigation, route }) {
   }, []);
 
   return (
-    <SafeAreaView style={{
+    <ImageBackground source={require('../../assets/bglogin.png')} style={{
       flex: 1,
-      backgroundColor: colors.white,
-    }}>
-
-      <Animated.View style={{
-        transform: [{ translateY: card }]
-      }}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+      width:'100%',
+      height:'100%' 
+    }}
+    
+    >
+        <ScrollView style={{position:"relative"}} showsVerticalScrollIndicator={false}>
           <View style={{
             justifyContent: 'center',
             alignItems: 'center',
-            height: windowHeight / 4,
+            height: windowHeight / 2,
           }}>
             <Animated.Image source={require('../../assets/logologin.png')} style={{
               width: windowHeight / 3,
               height: windowHeight / 3,
               transform: [{ scale: img }],
-              marginTop:'50%'
+              marginTop:'10%'
             }} />
           </View>
 
@@ -106,9 +105,11 @@ export default function Login({ navigation, route }) {
             borderRadius: 12,
             margin: 16,
             padding: 20,
-            marginTop:'30%'
+            marginTop:-50
  
           }}>
+
+          <View>
             <MyInput label="Username" onChangeText={x => {
               setKirim({
                 ...kirim,
@@ -133,8 +134,8 @@ export default function Login({ navigation, route }) {
                 color: colors.tekscolor,
               }}>Lupa kata sandi ?</Text>
             </TouchableOpacity>
-            <MyGap jarak={20} />
 
+            <MyGap jarak={20} />
             {loading && <MyLoading />}
             {!loading &&
               <MyButton
@@ -142,8 +143,13 @@ export default function Login({ navigation, route }) {
                 onPress={masuk}
                 title="Login"
                 Icons="log-in-outline"
+                
               />
             }
+          </View>
+            <MyGap jarak={0} />
+
+            <View style={{marginTop:'20%'}}>
             {!loading &&
               <TouchableWithoutFeedback onPress={() => navigation.navigate('Register')}>
                 <View style={{
@@ -155,22 +161,23 @@ export default function Login({ navigation, route }) {
                   <Text style={{
                     ...fonts.body3,
                     textAlign: 'center',
-                    color: colors.black
+                    color: colors.white
                   }}>Belum memiliki Akun ? <Text style={{
                     ...fonts.headline5,
                     textAlign: 'center',
-                    color: colors.tekscolor
+                    color: colors.white
                   }}>Daftar Sekarang !</Text></Text>
                 </View>
               </TouchableWithoutFeedback>}
+
+            </View>
 
           </View>
 
 
         </ScrollView>
-      </Animated.View>
-
-    </SafeAreaView >
+  
+    </ ImageBackground>
   );
 }
 

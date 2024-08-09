@@ -30,7 +30,7 @@ export default function MyHeader({ onPress, color = colors.white, title, icon = 
         ...fonts.headline4,
         flex: 1,
         textAlign:'center',
-
+        
         color: color
       }}>{title}</Text>
 

@@ -6,7 +6,7 @@ import { MyHeader } from '../../components'
 export default function DataPemeriksaanIbuHami({navigation}) {
   return (
     <View style={{flex:1, backgroundColor:colors.white}}>
-     <MyHeader title="Data Hasil Pemeriksaan Ibu Hamil"/>
+     <MyHeader title="Data Hasil Pemeriksaan"/>
      <ScrollView>
 
      </ScrollView>

@@ -73,7 +73,7 @@ export default function MyInput({
           style={{
             ...fonts.body3,
             flex: 1,
-            paddingLeft: 44,
+            paddingLeft: 10,
             height: 50,
             paddingHorizontal: 12,
             color: Color.blueGray[900],
