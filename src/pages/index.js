@@ -25,13 +25,21 @@ import TanyaJawab from './TanyaJawab';
 import Artikel from './Artikel';
 import Kuesioner from './Kuesioner';
 import TrisemesterII2 from './datapemeriksaanibuhamil/TreimesterII-2';
+import ArtikelDetail from './Artikel/ArtikelDetail';
+import VideoDetail from './VideoMateri/VideoDetail';
+import Detail from './datapemeriksaanibuhamil/Detail';
+import Riwayat from './dataibuhamil/Riwayat';
 
 
 
 
 export {
   Splash,
+  Riwayat,
   Home,
+  ArtikelDetail,
+  VideoDetail,
+  Detail,
   Login,
   Register,
   Imt,

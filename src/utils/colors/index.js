@@ -26,7 +26,7 @@ export const colors = {
 
 export const Color = {
   primary: {
-    900: '#688F4E',
+    900: '#D36499',
     800: '#2B5F71',
     700: '#427181',
     600: '#5A8290',

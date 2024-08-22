@@ -146,9 +146,6 @@ export default function ({ navigation, route }) {
                         <View style={{ padding: 10, }}>
                             <MyList label="Nama Lengkap" value={user.nama_lengkap} />
                             <MyList label="Username" value={user.username} />
-                            <MyList label="Telepon" value={user.telepon} />
-                            <MyList label="Jenis Kelamin" value={user.jenis_kelamin} />
-                            <MyList label="Tanggal Lahir" value={moment(user.tanggal_lahir).format('dddd, DD MMMM YYYY') + ' ( ' + moment().diff(user.tanggal_lahir, 'year') + ' Tahun )'} />
                         </View>
                         {/* data detail */}
                     </View>

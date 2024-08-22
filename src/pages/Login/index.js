@@ -77,106 +77,112 @@ export default function Login({ navigation, route }) {
   }, []);
 
   return (
-    <ImageBackground source={require('../../assets/bglogin.png')} style={{
+    <ImageBackground style={{
       flex: 1,
-      width:'100%',
-      height:'100%' 
+      backgroundColor: colors.primary,
     }}
-    
+
     >
-        <ScrollView style={{position:"relative"}} showsVerticalScrollIndicator={false}>
+      <ScrollView style={{ position: "relative" }} showsVerticalScrollIndicator={false}>
+        <View style={{
+          backgroundColor: colors.white,
+          borderBottomLeftRadius: 24,
+          borderBottomRightRadius: 24,
+        }}>
           <View style={{
             justifyContent: 'center',
             alignItems: 'center',
-            height: windowHeight / 2,
+            // height: windowHeight / 2,
           }}>
             <Animated.Image source={require('../../assets/logologin.png')} style={{
               width: windowHeight / 3,
               height: windowHeight / 3,
               transform: [{ scale: img }],
-              marginTop:'10%'
+              marginTop: '10%'
             }} />
           </View>
 
 
-       
-   
+
+
           <View style={{
             borderRadius: 12,
             margin: 16,
             padding: 20,
-            marginTop:-50
- 
+
           }}>
 
-          <View>
-            <MyInput label="Username" onChangeText={x => {
-              setKirim({
-                ...kirim,
-                username: x
-              })
-            }} iconname="person-outline" placeholder="Ketikan username" />
-            <MyGap jarak={20} />
-            <MyInput label="Kata Sandi" onChangeText={x => {
-              setKirim({
-                ...kirim,
-                password: x
-              })
-            }} iconname="lock-closed-outline" placeholder="Ketikan kata sandi" secureTextEntry={true} />
-            <TouchableOpacity onPress={() => {
-              let urlWA = 'https://wa.me/' + comp.tlp + `?text=Hallo admin saya lupa kata sandi . . .`;
-              Linking.openURL(urlWA)
-            }} style={{ marginTop: 0 }}>
-              <Text style={{
-                textAlign: 'right',
-                ...fonts.headline5,
-                marginTop: 10,
-                color: colors.tekscolor,
-              }}>Lupa kata sandi ?</Text>
-            </TouchableOpacity>
+            <View>
+              <MyInput label="Username" onChangeText={x => {
+                setKirim({
+                  ...kirim,
+                  username: x
+                })
+              }} iconname="person-outline" placeholder="Ketikan username" />
+              <MyGap jarak={20} />
+              <MyInput label="Kata Sandi" onChangeText={x => {
+                setKirim({
+                  ...kirim,
+                  password: x
+                })
+              }} iconname="lock-closed-outline" placeholder="Ketikan kata sandi" secureTextEntry={true} />
+              <TouchableOpacity onPress={() => {
+                let urlWA = 'https://wa.me/' + comp.tlp + `?text=Hallo admin saya lupa kata sandi . . .`;
+                Linking.openURL(urlWA)
+              }} style={{ marginTop: 0 }}>
+                <Text style={{
+                  textAlign: 'right',
+                  ...fonts.headline5,
+                  marginTop: 10,
+                  color: colors.tekscolor,
+                }}>Lupa kata sandi ?</Text>
+              </TouchableOpacity>
 
-            <MyGap jarak={20} />
-            {loading && <MyLoading />}
-            {!loading &&
-              <MyButton
-                warna={colors.primary}
-                onPress={masuk}
-                title="Login"
-                Icons="log-in-outline"
-                
-              />
-            }
-          </View>
+              <MyGap jarak={20} />
+              {loading && <MyLoading />}
+              {!loading &&
+                <MyButton
+                  warna={colors.primary}
+                  onPress={masuk}
+                  title="Login"
+                  Icons="log-in-outline"
+
+                />
+              }
+            </View>
             <MyGap jarak={0} />
 
-            <View style={{marginTop:'20%'}}>
-            {!loading &&
-              <TouchableWithoutFeedback onPress={() => navigation.navigate('Register')}>
-                <View style={{
-                  marginTop: 10,
-             
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}>
-                  <Text style={{
-                    ...fonts.body3,
-                    textAlign: 'center',
-                    color: colors.white
-                  }}>Belum memiliki Akun ? <Text style={{
-                    ...fonts.headline5,
-                    textAlign: 'center',
-                    color: colors.white
-                  }}>Daftar</Text></Text>
-                </View>
-              </TouchableWithoutFeedback>}
-
-            </View>
 
           </View>
 
 
-        </ScrollView>
-  
+
+        </View>
+        <View>
+          {!loading &&
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('Register')}>
+              <View style={{
+                marginTop: 10,
+
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}>
+                <Text style={{
+                  ...fonts.body3,
+                  textAlign: 'center',
+                  color: colors.white
+                }}>Belum memiliki Akun ? Silahkan<Text style={{
+                  ...fonts.headline5,
+                  textAlign: 'center',
+                  color: colors.white
+                }}> Daftar</Text></Text>
+              </View>
+            </TouchableWithoutFeedback>}
+
+        </View>
+
+      </ScrollView>
+
     </ ImageBackground>
   );
 }

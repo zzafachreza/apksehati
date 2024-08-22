@@ -77,136 +77,150 @@ export default function Home({ navigation, route }) {
       flex: 1,
       backgroundColor: colors.white,
     }}>
-    
-    <ScrollView>
+
+      <ScrollView>
 
 
 
-    <View style={{backgroundColor:colors.primary, padding:10, height:"30%", 
-    borderBottomLeftRadius:30,  borderBottomRightRadius:30, justifyContent:'space-between'}}>
+        <View style={{
+          backgroundColor: colors.primary, padding: 10, height: "30%",
+          borderBottomLeftRadius: 30, borderBottomRightRadius: 30, justifyContent: 'space-between'
+        }}>
 
-   <View style={{flexDirection:'row', justifyContent:'space-between', marginTop:20}}>
-   <View>
-      <Text style={{fontFamily:fonts.primary[300], color:colors.white, fontSize:12}}>Selamat Datang!</Text>
-      <Text style={{fontFamily:fonts.primary[600], color:colors.white, fontSize:20}}>Aplikasi Sehati</Text>
-    </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 20 }}>
+            <View>
+              <Text style={{ fontFamily: fonts.primary[300], color: colors.white, fontSize: 12 }}>Selamat Datang!</Text>
+              <Text style={{ fontFamily: fonts.primary[600], color: colors.white, fontSize: 20 }}>Aplikasi Sehati</Text>
+            </View>
 
-    <View style={{justifyContent:"center", }}>
-      <Image style={{width:43, height:43, }} source={require("../../assets/logo.png")}/>
-    </View>
+            <View style={{ justifyContent: "center", }}>
+              <Image style={{ width: 43, height: 43, }} source={require("../../assets/logo.png")} />
+            </View>
 
-   </View>
-
-   <View style={{alignItems:'center'}}>
-    <Image style={{width:332, height:190, top:20}} source={require("../../assets/slider_1.png")}/>
-   </View>
-    </View>
-
-    <View style={{padding:10, marginTop:'15%'}}>
-      
-      {/* DATA IBU */}
-      <TouchableWithoutFeedback onPress={() => navigation.navigate("DataIbuHamil")}>
-        <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
-        flexDirection:'row', justifyContent:'center'}}>
-          <View style={{left:-20}}>
-            <Image style={{width:56, height:56, }} source={require("../../assets/icon_dataibuhamil.png")}/>
           </View>
 
-          <View style={{justifyContent:'center'}}>
-            <Text style={{fontFamily:fonts.primary[600], color:colors.white, fontSize:22, }}>
-              Data Ibu Hamil
-            </Text>
+          <View style={{ alignItems: 'center' }}>
+            <Image style={{ width: 332, height: 190, top: 20 }} source={require("../../assets/slider_1.png")} />
           </View>
         </View>
-      </TouchableWithoutFeedback>
 
-      {/* DATA HASIL PEMERIKSAAN */}
-      <MyGap jarak={10}/>
-      <TouchableWithoutFeedback onPress={() => navigation.navigate('DataPemeriksaanIbuHamil')}>
-        <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
-        flexDirection:'row', justifyContent:'center'}}>
-          <View style={{left:-30}}>
-            <Image style={{width:56, height:56, }} source={require("../../assets/icon_datahasilpemeriksaan.png")}/>
-          </View>
-   
-          <View style={{justifyContent:'center'}}>
-            <Text style={{fontFamily:fonts.primary[600], color:colors.white, fontSize:22, left:-10}}>
-              Data Hasil{'\n'}Pemeriksaan
-            </Text>
-          </View>
+        <View style={{ padding: 10, marginTop: '15%' }}>
+
+          {/* DATA IBU */}
+          <TouchableWithoutFeedback onPress={() => navigation.navigate("DataIbuHamil", user)}>
+            <View style={{
+              padding: 10, backgroundColor: colors.primary, borderRadius: 10,
+              flexDirection: 'row', justifyContent: 'center'
+            }}>
+              <View style={{ left: -20 }}>
+                <Image style={{ width: 56, height: 56, }} source={require("../../assets/icon_dataibuhamil.png")} />
+              </View>
+
+              <View style={{ justifyContent: 'center' }}>
+                <Text style={{ fontFamily: fonts.primary[600], color: colors.white, fontSize: 22, }}>
+                  Data Ibu Hamil
+                </Text>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+
+          {/* DATA HASIL PEMERIKSAAN */}
+          <MyGap jarak={10} />
+          <TouchableWithoutFeedback onPress={() => navigation.navigate('DataPemeriksaanIbuHamil')}>
+            <View style={{
+              padding: 10, backgroundColor: colors.primary, borderRadius: 10,
+              flexDirection: 'row', justifyContent: 'center'
+            }}>
+              <View style={{ left: -30 }}>
+                <Image style={{ width: 56, height: 56, }} source={require("../../assets/icon_datahasilpemeriksaan.png")} />
+              </View>
+
+              <View style={{ justifyContent: 'center' }}>
+                <Text style={{ fontFamily: fonts.primary[600], color: colors.white, fontSize: 22, left: -10 }}>
+                  Data Hasil{'\n'}Pemeriksaan
+                </Text>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+
+          {/* VIDEO MATERI */}
+          <MyGap jarak={10} />
+          <TouchableWithoutFeedback onPress={() => navigation.navigate("VideoMateri")}>
+            <View style={{
+              padding: 10, backgroundColor: colors.primary, borderRadius: 10,
+              flexDirection: 'row', justifyContent: 'center'
+            }}>
+              <View style={{ left: -35 }}>
+                <Image style={{ width: 56, height: 56, }} source={require("../../assets/icon_videomateri.png")} />
+              </View>
+
+              <View style={{ justifyContent: 'center' }}>
+                <Text style={{ fontFamily: fonts.primary[600], color: colors.white, fontSize: 22, left: -15 }}>
+                  Video Materi
+                </Text>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+
+          {/* TANYA JAWAB */}
+          <MyGap jarak={10} />
+          <TouchableWithoutFeedback onPress={() => navigation.navigate("TanyaJawab")}>
+            <View style={{
+              padding: 10, backgroundColor: colors.primary, borderRadius: 10,
+              flexDirection: 'row', justifyContent: 'center'
+            }}>
+              <View style={{ left: -30 }}>
+                <Image style={{ width: 56, height: 56, }} source={require("../../assets/icon_tanyajawab.png")} />
+              </View>
+
+              <View style={{ justifyContent: 'center' }}>
+                <Text style={{ fontFamily: fonts.primary[600], color: colors.white, fontSize: 22, left: -10 }}>
+                  Tanya Jawab
+                </Text>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+
+
+          {/* ARTIKEL */}
+          <MyGap jarak={10} />
+          <TouchableWithoutFeedback onPress={() => navigation.navigate("Artikel")}>
+            <View style={{
+              padding: 10, backgroundColor: colors.primary, borderRadius: 10,
+              flexDirection: 'row', justifyContent: 'center'
+            }}>
+              <View style={{ left: -70 }}>
+                <Image style={{ width: 56, height: 56, }} source={require("../../assets/icon_artikel.png")} />
+              </View>
+
+              <View style={{ justifyContent: 'center' }}>
+                <Text style={{ fontFamily: fonts.primary[600], color: colors.white, fontSize: 22, left: -20 }}>
+                  Artikel
+                </Text>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+
+          {/* KUESIONER */}
+          <MyGap jarak={10} />
+          <TouchableWithoutFeedback onPress={() => navigation.navigate("Kuesioner")}>
+            <View style={{
+              padding: 10, backgroundColor: colors.primary, borderRadius: 10,
+              flexDirection: 'row', justifyContent: 'center'
+            }}>
+              <View style={{ left: -50 }}>
+                <Image style={{ width: 56, height: 56, }} source={require("../../assets/icon_kuesioner.png")} />
+              </View>
+
+              <View style={{ justifyContent: 'center' }}>
+                <Text style={{ fontFamily: fonts.primary[600], color: colors.white, fontSize: 22, left: -20 }}>
+                  Kuesioner
+                </Text>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
         </View>
-      </TouchableWithoutFeedback>
-
-      {/* VIDEO MATERI */}
-      <MyGap jarak={10}/>
-      <TouchableWithoutFeedback onPress={() => navigation.navigate("VideoMateri")}>
-        <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
-        flexDirection:'row', justifyContent:'center'}}>
-          <View style={{left:-35}}>
-            <Image style={{width:56, height:56, }} source={require("../../assets/icon_videomateri.png")}/>
-          </View>
-   
-          <View style={{justifyContent:'center'}}>
-            <Text style={{fontFamily:fonts.primary[600], color:colors.white, fontSize:22, left:-15}}>
-              Video Materi
-            </Text>
-          </View>
-        </View>
-      </TouchableWithoutFeedback>
-
-            {/* TANYA JAWAB */}
-            <MyGap jarak={10}/>
-      <TouchableWithoutFeedback onPress={() => navigation.navigate("TanyaJawab")}>
-        <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
-        flexDirection:'row', justifyContent:'center'}}>
-          <View style={{left:-30}}>
-            <Image style={{width:56, height:56, }} source={require("../../assets/icon_tanyajawab.png")}/>
-          </View>
-   
-          <View style={{justifyContent:'center'}}>
-            <Text style={{fontFamily:fonts.primary[600], color:colors.white, fontSize:22, left:-10}}>
-              Tanya Jawab
-            </Text>
-          </View>
-        </View>
-      </TouchableWithoutFeedback>
-
-
-        {/* ARTIKEL */}
-        <MyGap jarak={10}/>
-      <TouchableWithoutFeedback onPress={() => navigation.navigate("Artikel")}>
-        <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
-        flexDirection:'row', justifyContent:'center'}}>
-          <View style={{left:-70}}>
-            <Image style={{width:56, height:56, }} source={require("../../assets/icon_artikel.png")}/>
-          </View>
-   
-          <View style={{justifyContent:'center'}}>
-            <Text style={{fontFamily:fonts.primary[600], color:colors.white, fontSize:22, left:-20}}>
-              Artikel
-            </Text>
-          </View>
-        </View>
-      </TouchableWithoutFeedback>
-
-         {/* KUESIONER */}
-         <MyGap jarak={10}/>
-      <TouchableWithoutFeedback onPress={() => navigation.navigate("Kuesioner")}>
-        <View style={{padding:10, backgroundColor:colors.primary, borderRadius:10,
-        flexDirection:'row', justifyContent:'center'}}>
-          <View style={{left:-50}}>
-            <Image style={{width:56, height:56, }} source={require("../../assets/icon_kuesioner.png")}/>
-          </View>
-   
-          <View style={{justifyContent:'center'}}>
-            <Text style={{fontFamily:fonts.primary[600], color:colors.white, fontSize:22, left:-20}}>
-              Kuesioner
-            </Text>
-          </View>
-        </View>
-      </TouchableWithoutFeedback>
-    </View>
-    </ScrollView>
+      </ScrollView>
     </SafeAreaView>
   )
 }

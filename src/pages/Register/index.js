@@ -41,9 +41,6 @@ export default function Register({ navigation, route }) {
         api_token: api_token,
         username: '',
         nama_lengkap: '',
-        jenis_kelamin: 'Laki-laki',
-        tanggal_lahir: moment().format('YYYY-MM-DD'),
-        telepon: '',
         password: '',
         repassword: '',
 
@@ -100,8 +97,8 @@ export default function Register({ navigation, route }) {
                         toast.show(res.data.message, {
                             type: 'success'
                         });
-                        storeData('user', res.data.data);
-                        navigation.replace('MainApp');
+                        // storeData('user', res.data.data);
+                        navigation.replace('Login');
 
                     }
 
@@ -123,10 +120,11 @@ export default function Register({ navigation, route }) {
     const [sama, setSama] = useState(true)
 
     return (
-        <ImageBackground source={require('../../assets/bglogin.png')} style={{
+        <ImageBackground style={{
             flex: 1,
-            width:'100%',
-            height:'100%'
+            backgroundColor: colors.primary,
+            width: '100%',
+            height: '100%'
         }}>
             {/* <MyHeader title="Daftar Akun" /> */}
 
@@ -135,10 +133,12 @@ export default function Register({ navigation, route }) {
 
 
                 <View style={{
+                    backgroundColor: colors.white,
                     borderRadius: 12,
-                    margin: 16,
-                    padding:20,
-                
+                    borderBottomLeftRadius: 24,
+                    borderBottomRightRadius: 24,
+                    padding: 20,
+
                 }}>
 
                     <Text style={{
@@ -147,7 +147,7 @@ export default function Register({ navigation, route }) {
                         textAlign: 'center',
                         marginBottom: 2
                     }}>Daftar</Text>
-             
+
 
                     <MyGap jarak={24} />
                     {/* NAMA LENGKAP */}
@@ -166,13 +166,6 @@ export default function Register({ navigation, route }) {
                             username: x
                         })
                     }} iconname='at-outline' placeholder='Ketikan username' />
-                    <MyGap jarak={20} />
-                    <MyInput label='Nomor Telepon' onChangeText={x => {
-                        setKirim({
-                            ...kirim,
-                            telepon: x
-                        })
-                    }} iconname='call-outline' keyboardType='phone-pad' placeholder='Ketikan nomor telepon' />
 
                     <MyGap jarak={20} />
                     {/*INPUT KATA SANDI */}
@@ -217,9 +210,9 @@ export default function Register({ navigation, route }) {
 
                         }
                     />
-                    <MyGap jarak={20} />
+                    <MyGap jarak={35} />
 
-         
+
                     {!loading &&
                         <>
                             <MyButton
@@ -230,31 +223,33 @@ export default function Register({ navigation, route }) {
                                 onPress={simpan}
                             />
 
-                            <MyGap jarak={50} />
-                            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-                                <Text style={{
-                                    ...fonts.body3,
-                                    color: colors.white,
-                                    textAlign: 'center'
-                                }}>
-                                    Saya sudah memiliki akun? <Text style={{
-                                        ...fonts.headline5,
-                                        color: colors.white,
-                                        textAlign: 'center'
-                                    }}>
-                                        Masuk
-                                    </Text>
-                                </Text>
-                            </TouchableOpacity>
+
 
                         </>
                     }
 
-                    {loading && <MyLoading />}
 
+
+                    {loading && <MyLoading />}
+                    <MyGap jarak={25} />
                 </View>
 
-
+                <MyGap jarak={25} />
+                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                    <Text style={{
+                        ...fonts.body3,
+                        color: colors.white,
+                        textAlign: 'center'
+                    }}>
+                        Saya sudah memiliki akun? <Text style={{
+                            ...fonts.headline5,
+                            color: colors.white,
+                            textAlign: 'center'
+                        }}>
+                            Masuk
+                        </Text>
+                    </Text>
+                </TouchableOpacity>
             </ScrollView>
 
 

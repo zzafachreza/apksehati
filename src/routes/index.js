@@ -29,6 +29,10 @@ import {
   Artikel,
   Kuesioner,
   TrisemesterII2,
+  ArtikelDetail,
+  VideoDetail,
+  Detail,
+  Riwayat,
 
 
 
@@ -55,10 +59,43 @@ const MainApp = () => {
 
 export default function Router() {
   return (
-    <Stack.Navigator initialRouteName='MainApp'>
+    <Stack.Navigator initialRouteName='Splash'>
       <Stack.Screen
         name="Splash"
         component={Splash}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="ArtikelDetail"
+        component={ArtikelDetail}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="Detail"
+        component={Detail}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+
+      <Stack.Screen
+        name="Riwayat"
+        component={Riwayat}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="VideoDetail"
+        component={VideoDetail}
         options={{
           headerShown: false,
         }}
@@ -113,7 +150,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="DataPemeriksaanIbuHamil"
         component={DataPemeriksaanIbuHami}
         options={{
@@ -122,7 +159,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="SubDataPemeriksaanIbuHamil"
         component={SubDataPemeriksaanIbuHami}
         options={{
@@ -131,8 +168,8 @@ export default function Router() {
         }}
       />
 
-      
-<Stack.Screen
+
+      <Stack.Screen
         name="IbuHamil"
         component={IbuHamil}
         options={{
@@ -141,7 +178,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterI"
         component={TrisemesterI}
         options={{
@@ -150,7 +187,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterII1"
         component={TrisemesterII1}
         options={{
@@ -159,7 +196,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterII2"
         component={TrisemesterII2}
         options={{
@@ -168,7 +205,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterIII1"
         component={TrisemesterIII1}
         options={{
@@ -178,7 +215,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterIII2"
         component={TrisemesterIII2}
         options={{
@@ -188,7 +225,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterIII3"
         component={TrisemesterIII3}
         options={{
@@ -198,7 +235,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="IbuBersalin"
         component={IbuBersalin}
         options={{
@@ -207,7 +244,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="IbuNifas"
         component={IbuNifas}
         options={{
@@ -217,7 +254,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="IbuNifasKF"
         component={IbuNifasKF}
         options={{
@@ -236,7 +273,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TanyaJawab"
         component={TanyaJawab}
         options={{
@@ -245,7 +282,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="Artikel"
         component={Artikel}
         options={{
@@ -255,7 +292,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="Kuesioner"
         component={Kuesioner}
         options={{
