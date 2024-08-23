@@ -35,7 +35,11 @@ export default function IbuHamil({ route, navigation }) {
              
               '${route.params.id}',
               ${soal.map(i => {
-        return `'${i.jawab}'`
+        if (i.tipe == 'date') {
+          return `'${i.jawab.length > 0 ? i.jawab : moment().format('YYYY-MM-DD')}'`
+        } else {
+          return `'${i.jawab}'`
+        }
       })}
             
             )`;
@@ -94,12 +98,12 @@ export default function IbuHamil({ route, navigation }) {
                 }}>
                   <MyPicker label="Trisemester " data={[
                     { label: 'Pilih Trisemester ', value: '' },
-                    { label: 'Trisemester  I', value: 'Trisemester  I' },
-                    { label: 'Trisemester  II - 1', value: 'Trisemester  II - 1' },
-                    { label: 'Trisemester  II - 2', value: 'Trisemester  II - 2' },
-                    { label: 'Trisemester  III - 1', value: 'Trisemester  III - 1' },
-                    { label: 'Trisemester  III - 2', value: 'Trisemester  III - 2' },
-                    { label: 'Trisemester  III - 3', value: 'Trisemester  III - 3' },
+                    { label: 'Trisemester I', value: 'Trisemester I' },
+                    { label: 'Trisemester II - 1', value: 'Trisemester II - 1' },
+                    { label: 'Trisemester II - 2', value: 'Trisemester II - 2' },
+                    { label: 'Trisemester III - 1', value: 'Trisemester III - 1' },
+                    { label: 'Trisemester III - 2', value: 'Trisemester III - 2' },
+                    { label: 'Trisemester III - 3', value: 'Trisemester III - 3' },
                   ]}
 
                     value={item.jawab}
@@ -113,7 +117,50 @@ export default function IbuHamil({ route, navigation }) {
               }
 
 
-              {item.tipe !== 'date' && item.kolom !== 'trisemester' &&
+              {/* Trisemester I */}
+              {soal[0].jawab.length > 0 && soal[0].jawab == 'Trisemester I' && item.kolom != 'test_lab_protein_urine' && item.kolom != 'test_lab_gula_darah' && item.tipe !== 'date' && item.kolom !== 'trisemester' &&
+                <View style={{
+                  marginHorizontal: 16,
+                  marginVertical: 8,
+                }}>
+                  <MyInput label={item.soal} onChangeText={x => {
+                    let tmp = [...soal];
+                    tmp[index].jawab = x;
+                    setSoal(tmp);
+                  }} />
+                </View>
+              }
+
+              {/* Trisemester II - 1  */}
+              {soal[0].jawab.length > 0 && soal[0].jawab == 'Trisemester II - 1'
+                && item.kolom != 'pengukuran_tinggi_badan'
+                && item.kolom != 'test_lab_hemoglobin_hb'
+                && item.kolom != 'test_golongan_darah'
+                && item.kolom != 'test_lab_gula_darah'
+                && item.kolom != 'pemeriksaan_usg'
+
+                && item.tipe !== 'date' && item.kolom !== 'trisemester' &&
+                <View style={{
+                  marginHorizontal: 16,
+                  marginVertical: 8,
+                }}>
+                  <MyInput label={item.soal} onChangeText={x => {
+                    let tmp = [...soal];
+                    tmp[index].jawab = x;
+                    setSoal(tmp);
+                  }} />
+                </View>
+              }
+
+              {/* Trisemester II - 2  */}
+              {soal[0].jawab.length > 0 && soal[0].jawab == 'Trisemester II - 2'
+                && item.kolom != 'pengukuran_tinggi_badan'
+                && item.kolom != 'test_lab_hemoglobin_hb'
+                && item.kolom != 'test_golongan_darah'
+                && item.kolom != 'test_lab_gula_darah'
+                && item.kolom != 'pemeriksaan_usg'
+
+                && item.tipe !== 'date' && item.kolom !== 'trisemester' &&
                 <View style={{
                   marginHorizontal: 16,
                   marginVertical: 8,
@@ -127,7 +174,65 @@ export default function IbuHamil({ route, navigation }) {
               }
 
 
-              {item.kolom == 'sifilis' &&
+              {/* Trisemester III - 1  */}
+              {soal[0].jawab.length > 0 && soal[0].jawab == 'Trisemester III - 1'
+
+                && item.kolom != 'pengukuran_tinggi_badan'
+                && item.kolom != 'test_golongan_darah'
+                && item.kolom != 'pemeriksaan_usg'
+                && item.tipe !== 'date' && item.kolom !== 'trisemester' &&
+                <View style={{
+                  marginHorizontal: 16,
+                  marginVertical: 8,
+                }}>
+                  <MyInput label={item.soal} onChangeText={x => {
+                    let tmp = [...soal];
+                    tmp[index].jawab = x;
+                    setSoal(tmp);
+                  }} />
+                </View>
+              }
+
+              {/* Trisemester III - 2  */}
+              {soal[0].jawab.length > 0 && soal[0].jawab == 'Trisemester III - 2'
+
+                && item.kolom != 'pengukuran_tinggi_badan'
+                && item.kolom != 'test_golongan_darah'
+
+                && item.tipe !== 'date' && item.kolom !== 'trisemester' &&
+                <View style={{
+                  marginHorizontal: 16,
+                  marginVertical: 8,
+                }}>
+                  <MyInput label={item.soal} onChangeText={x => {
+                    let tmp = [...soal];
+                    tmp[index].jawab = x;
+                    setSoal(tmp);
+                  }} />
+                </View>
+              }
+
+              {/* Trisemester III - 3  */}
+              {soal[0].jawab.length > 0 && soal[0].jawab == 'Trisemester III - 3'
+                && item.kolom != 'pengukuran_tinggi_badan'
+                && item.kolom != 'test_lab_hemoglobin_hb'
+                && item.kolom != 'test_golongan_darah'
+                && item.kolom != 'pemeriksaan_usg'
+                && item.tipe !== 'date' && item.kolom !== 'trisemester' &&
+                <View style={{
+                  marginHorizontal: 16,
+                  marginVertical: 8,
+                }}>
+                  <MyInput label={item.soal} onChangeText={x => {
+                    let tmp = [...soal];
+                    tmp[index].jawab = x;
+                    setSoal(tmp);
+                  }} />
+                </View>
+              }
+
+
+              {soal[0].jawab.length > 0 && item.kolom == 'pemeriksaan_usg' &&
 
                 <Text style={{
                   fontFamily: fonts.secondary[600],
@@ -139,7 +244,7 @@ export default function IbuHamil({ route, navigation }) {
               }
 
 
-              {item.tipe == 'date' &&
+              {soal[0].jawab.length > 0 && item.tipe == 'date' &&
                 <View style={{
                   marginHorizontal: 16,
                   marginVertical: 8,

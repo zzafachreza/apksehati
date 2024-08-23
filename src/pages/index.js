@@ -29,6 +29,10 @@ import ArtikelDetail from './Artikel/ArtikelDetail';
 import VideoDetail from './VideoMateri/VideoDetail';
 import Detail from './datapemeriksaanibuhamil/Detail';
 import Riwayat from './dataibuhamil/Riwayat';
+import DetailHamil from './datapemeriksaanibuhamil/DetailHamil';
+import EditBersalin from './datapemeriksaanibuhamil/EditBersalin';
+import EditHamil from './datapemeriksaanibuhamil/EditHamil';
+import EditNifas from './datapemeriksaanibuhamil/EditNifas';
 
 
 
@@ -65,6 +69,10 @@ export {
   Artikel,
   Kuesioner,
   TrisemesterII2,
+  DetailHamil,
+  EditBersalin,
+  EditHamil,
+  EditNifas
 
 
 

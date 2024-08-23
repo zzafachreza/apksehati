@@ -9,6 +9,8 @@ import moment from 'moment';
 
 export default function IbuBersalin({ route, navigation }) {
 
+
+
   const handleBack = () => {
     navigation.goBack()
   }

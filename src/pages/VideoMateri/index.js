@@ -85,14 +85,7 @@ export default function VideoMateri({ navigation, route }) {
           <YoutubePlayer
             height={250}
             videoId={data.link}
-            webViewProps={{
-              injectedJavaScript: `
-                  var element = document.getElementsByClassName('container')[0];
-                  element.style.position = 'unset';
-                  element.style.paddingBottom = 'unset';
-                  true;
-                `,
-            }}
+
           />
 
           <Text style={{

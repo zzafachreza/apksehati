@@ -35,7 +35,11 @@ export default function IbuBersalin({ route, navigation }) {
              
               '${route.params.id}',
               ${soal.map(i => {
-        return `'${i.jawab}'`
+        if (i.tipe == 'date') {
+          return `'${i.jawab.length > 0 ? i.jawab : moment().format('YYYY-MM-DD')}'`
+        } else {
+          return `'${i.jawab}'`
+        }
       })}
             
             )`;

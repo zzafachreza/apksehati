@@ -44,7 +44,13 @@ export default function DataPemeriksaanIbuHami({ navigation }) {
         <View style={{ padding: 10, flex: 1 }}>
           <FlatList data={data} renderItem={({ item, index }) => {
             return (
-              <TouchableWithoutFeedback onPress={() => navigation.navigate('Detail', item)}>
+              <TouchableWithoutFeedback onPress={() => {
+                if (item.table == 'cekhamil') {
+                  navigation.navigate('DetailHamil', item)
+                } else {
+                  navigation.navigate('Detail', item)
+                }
+              }}>
                 <View style={{
                   padding: 10,
                   borderWidth: 1,
@@ -58,6 +64,8 @@ export default function DataPemeriksaanIbuHami({ navigation }) {
                     flex: 1,
                   }}>
                     <Text style={{ fontFamily: fonts.secondary[800], fontSize: 14 }}>{item.menu}</Text>
+
+                    <Text style={{ fontFamily: fonts.secondary[600], fontSize: 14, color: colors.secondary }}>{item.info}</Text>
 
                     <Text style={{ fontFamily: fonts.secondary[400], fontSize: 14, color: colors.primary }}>{moment(item.tanggal).format('DD MMMM YYYY')}</Text>
                   </View>

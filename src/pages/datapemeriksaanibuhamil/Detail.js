@@ -92,29 +92,24 @@ export default function Detail({ route, navigation }) {
                         ])
                     }} title="Hapus" warna={colors.danger} />
                 </View>
-                {/* <View style={{
+                <View style={{
                     flex: 1,
                     paddingLeft: 5,
                 }}>
                     <MyButton title="Edit" onPress={() => {
-                        if (ITEM.table == 'cekhamil') {
-                            navigation.navigate('EditHamil', {
-                                data: data,
-                                id: ITEM.id
-                            })
-                        } else if (ITEM.table == 'cekbersalin') {
-                            navigation.navigate('EditMelahirkan', {
+                        if (ITEM.table == 'cekbersalin') {
+                            navigation.navigate('EditBersalin', {
                                 data: data,
                                 id: ITEM.id
                             })
                         } else if (ITEM.table == 'ceknifas') {
-                            navigation.navigate('EditMenyusui', {
+                            navigation.navigate('EditNifas', {
                                 data: data,
                                 id: ITEM.id
                             })
                         }
                     }} warna={colors.secondary} />
-                </View> */}
+                </View>
             </View>
             <ScrollView contentContainerStyle={{ flexGrow: 1, backgroundColor: '#F5FCFF', }}>
 
@@ -134,6 +129,10 @@ export default function Detail({ route, navigation }) {
                             borderBottomWidth: 1,
                             marginVertical: 5, borderBottomColor: colors.border, paddingHorizontal: 4, flexDirection: "row", alignItems: 'center'
                         }}>
+
+
+
+
                             <View style={{ padding: 4, width: '70%' }}>
 
                                 <Text style={{ fontFamily: fonts.primary[400], textAlign: 'justify', fontSize: 12, color: colors.tekscolor }}>

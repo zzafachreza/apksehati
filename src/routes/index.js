@@ -33,6 +33,10 @@ import {
   VideoDetail,
   Detail,
   Riwayat,
+  DetailHamil,
+  EditBersalin,
+  EditNifas,
+  EditHamil,
 
 
 
@@ -172,6 +176,46 @@ export default function Router() {
       <Stack.Screen
         name="IbuHamil"
         component={IbuHamil}
+        options={{
+          headerShown: false,
+
+        }}
+      />
+
+
+
+      <Stack.Screen
+        name="EditBersalin"
+        component={EditBersalin}
+        options={{
+          headerShown: false,
+
+        }}
+      />
+
+
+      <Stack.Screen
+        name="EditNifas"
+        component={EditNifas}
+        options={{
+          headerShown: false,
+
+        }}
+      />
+
+
+      <Stack.Screen
+        name="EditHamil"
+        component={EditHamil}
+        options={{
+          headerShown: false,
+
+        }}
+      />
+
+      <Stack.Screen
+        name="DetailHamil"
+        component={DetailHamil}
         options={{
           headerShown: false,
 
