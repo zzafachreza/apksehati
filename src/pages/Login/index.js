@@ -10,7 +10,8 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
   SafeAreaView,
-  ScrollView
+  ScrollView,
+  Linking
 } from 'react-native';
 import { MyButton, MyGap, MyInput } from '../../components';
 import { MyDimensi, colors, fonts, windowHeight, windowWidth, Color } from '../../utils';

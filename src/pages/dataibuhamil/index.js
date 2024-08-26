@@ -55,8 +55,18 @@ export default function DataIbuHamil({ route, navigation }) {
         
                 WHERE fid_user='${route.params.id}'`;
             }
-            console.log(sql);
-            6
+
+            axios.post(apiURL + 'add_data', {
+                sql: sql
+            }).then(res => {
+                console.log(res.data);
+                showMessage({
+                    type: 'success',
+                    icon: 'success',
+                    message: res.data.message
+                });
+                // navigation.navigate('Riwayat');
+            })
         } else {
             showMessage({
                 type: 'danger',
